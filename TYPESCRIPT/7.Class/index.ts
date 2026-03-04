@@ -122,7 +122,7 @@ class AkunBank {
     withdraw(amount: number) {
         if(this.saldo >= amount) {
             this.saldo -= amount
-            return"withdraw berhasil"
+            return "withdraw berhasil"
         } else {
             return "saldo tidak cukup"
         };
