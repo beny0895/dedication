@@ -1,122 +1,74 @@
-// RABU, 7, JANUARY 2026, 12.11 - 13.21
+// WEDNESDAY, 7 JANUARY 2026, 12:11 - 13:21
 
 // no 1
-let angka: number = 1;
-if (angka > 0) {
-    const aksi = "Angka Posotif"
-    console.log(aksi)
+let number1: number = 1;
+if (number1 > 0) {
+    const action = "Positive Number";
+    console.log(action);
 }
 
 // no 2
 let c: number = 75;
-if( c >= 75) {
-    const input = "lulus";
-    console.log(input)
+if (c >= 75) {
+    const result = "passed";
+    console.log(result);
 };
 
 // no 3
-let islogin = true
-if (islogin) {
-    const aksi = "User Sudah Login"
-    console.log(aksi)
+let isLoggedIn = true;
+if (isLoggedIn) {
+    const action = "User Already Logged In";
+    console.log(action);
 } else {
-    const aksi = "User Tidak Login";
-    console.log(aksi)
+    const action = "User Not Logged In";
+    console.log(action);
 }
 
 // no 4
-let number: number = 1;
-if(number % 2 == 0) {
-    const aksi = "genap";
-    console.log(aksi)
-} else if (number % 2 == 1) {
-    const aksi = "ganjil";
-    console.log(aksi);
+let number2: number = 1;
+if (number2 % 2 == 0) {
+    const action = "even";
+    console.log(action);
+} else if (number2 % 2 == 1) {
+    const action = "odd";
+    console.log(action);
 } else {
-    const aksi ="masukan input"
-    console.log(aksi)
+    const action = "please enter input";
+    console.log(action);
 }
 
 // no 5
 let d: number = 75;
-if( d >= 75) {
-    const input = "lulus";
-    console.log(input)
+if (d >= 75) {
+    const result = "passed";
+    console.log(result);
 } else {
-    const input = "tidak lulus";
-    console.log(input)
+    const result = "not passed";
+    console.log(result);
 };
 
 // no 6
-let umur1: number = 0;
-if(umur1 >=18) {
-    const aksi = "Boleh Buat SIM";
-    console.log(aksi);
-} else if (umur1 < 18 && umur1 > 1 ) {
-    const aksi = "Tidak Boleh Buat SIM";    
-    console.log(aksi);
+let age1: number = 0;
+if (age1 >= 18) {
+    const action = "Allowed to Make Driver’s License";
+    console.log(action);
+} else if (age1 < 18 && age1 > 1) {
+    const action = "Not Allowed to Make Driver’s License";
+    console.log(action);
 } else {
-    const aksi = "Belum Lahir";
-    console.log(aksi);
+    const action = "Not Born Yet";
+    console.log(action);
 }
 
 // SWITCH CASE
 // no 7
-let hari: number =1;
-switch (hari) {
-    case 1 :
-        console.log("senin");
-    break
-    case 2 :
-        console.log("selasa");
-    break
-    case 3 :
-        console.log("rabu");
-    break
-    case 4 :
-        console.log("kamis");
-    break
-    case 5 :
-        console.log("jumat");
-    break
-    case 6 :
-        console.log("sabtu");
-    break
-    case 7 :
-        console.log("minggu");
-    break
-    default :
-        console.log("hari tidak valid")
+let day: number = 1;
+switch (day) {
+    case 1:
+        console.log("monday");
+        break;
+    case 2:
+        console.log("tuesday");
+        break;
+    case 3:
 };
-
-// no 8
-let menu: string = "susu";
-switch (menu) {
-    case "teh" :
-        console.log("harga teh 5.000");
-    break
-    case "kopi" :
-        console.log("harga kopi 7.000");
-    break
-    case "susu" :
-        console.log("harga susu 6.000");
-    break
-    default :
-        console.log("Menu tidak tersedia")
-}
-
-// no 9
-let lampu: string = "kuning";
-switch (lampu) {
-    case "merah":
-        console.log("berhenti");
-    break
-    case "kuning":
-        console.log("hati hati");
-    break
-    case "hijau":
-        console.log("jalan");
-    break
-    default:
-        console.log("lampu rusak")
-}

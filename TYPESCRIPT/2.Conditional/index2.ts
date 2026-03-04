@@ -1,145 +1,141 @@
-// RABU, 7, JANUARY 2026, 14.31 - 16.42. lama karena nonton
+// WEDNESDAY, 7 JANUARY 2026, 14:31 - 16:42
 
-let nilai: number = 100;
-if(nilai >= 80 && nilai === 100 ) {
-    const pemberitahuan = "lulus"
-    console.log(pemberitahuan);
-} else if (nilai <80 && nilai >=1 ) {
+let score: number = 100;
+if (score >= 80 && score === 100) {
+    const notification = "passed";
+    console.log(notification);
+} else if (score < 80 && score >= 1) {
     console.log("remedial");
-} else if (nilai === 0) {
-    console.log("tidak lulus")
+} else if (score === 0) {
+    console.log("not passed");
 } else {
-    console.log("tidak mengikuti ujian")
+    console.log("did not take the exam");
 }
-
 
 let value: number = 80;
 switch (true) {
-    case value >=80 : //1
-        console.log("lulus");
-    break
-    case value < 80 : //2
-        console.log("tidak lulus");
-    break
+    case value >= 80: //1
+        console.log("passed");
+        break;
+    case value < 80: //2
+        console.log("not passed");
+        break;
     default: //3
-        console.log("tidak mengikuti ujian")
+        console.log("did not take the exam");
 }
 
-let buah: string = "apel"
-switch (buah) {
-    case "apel" :
-        const harga = "harga buah apel 10.000"
-        console.log(harga);
-    break
-    case "jeruk":
-        console.log("harga buah jeruk 8.000");
-    break
-    default: 
-        console.log("tidak beli buah");
+let fruit: string = "apple";
+switch (fruit) {
+    case "apple":
+        const price = "price of apple 10,000";
+        console.log(price);
+        break;
+    case "orange":
+        console.log("price of orange 8,000");
+        break;
+    default:
+        console.log("did not buy fruit");
 }
 
-
-
-// Buat program untuk mengecek apakah angka lebih besar dari 100.
-let angka1: number = 10;
-if(angka1 >= 100) {
-    console.log("angka lebih dari 100")
-} if (angka1 < 100) {
-    console.log("angka kurang dari 100")
+// Program to check if a number is greater than 100.
+let number1: number = 10;
+if (number1 >= 100) {
+    console.log("number greater than 100");
+}
+if (number1 < 100) {
+    console.log("number less than 100");
 };
 
-// Buat program untuk mengecek apakah sebuah string kosong atau tidak.
-let kalimat: string = "";
-if(kalimat === "") {
-    console.log("string kosong");
-} if (kalimat !="") {
-    console.log("string tidak kosong")
+// Program to check if a string is empty or not.
+let sentence: string = "";
+if (sentence === "") {
+    console.log("string is empty");
+}
+if (sentence != "") {
+    console.log("string is not empty");
 }
 
-// Buat program untuk mengecek apakah saldo lebih dari 1.000.000.
-let saldo: number = 10000;
-if(saldo >= 1000000) {
-    console.log("saldo lebih dari 1.000.000");
+// Program to check if balance is more than 1,000,000.
+let balance: number = 10000;
+if (balance >= 1000000) {
+    console.log("balance more than 1,000,000");
 }
 
-// Buat program untuk mengecek login berhasil atau gagal berdasarkan username.
+// Program to check if login is successful or failed based on username.
 let username: string = "agus";
 if (username === "budi") {
-    console.log("login berhasil");
+    console.log("login successful");
 } else {
-    console.log("login gagal")
+    console.log("login failed");
 };
 
-// Buat program untuk mengecek nilai ujian lulus atau tidak lulus (≥ 75).
-
-let nilaiujian: number = 74;
-if(nilaiujian >= 75) {
-    console.log("lulus")
+// Program to check if exam score is passed or not (≥ 75).
+let examScore: number = 74;
+if (examScore >= 75) {
+    console.log("passed");
 } else {
-    console.log("tidak lulus")
+    console.log("not passed");
 }
 
-// Buat program untuk mengecek apakah suhu panas (> 30) atau normal.
-let suhu: number = 40
-if(suhu >=30) {
-    console.log("suhu panas");
+// Program to check if temperature is hot (> 30) or normal.
+let temperature: number = 40;
+if (temperature >= 30) {
+    console.log("temperature is hot");
 } else {
-    console.log("suhu tidak panas")
+    console.log("temperature is not hot");
 };
 
-// Buat program yang menampilkan jenis kendaraan berdasarkan kode (M, C, B).
-
-let kendaraan: string = "avanza";
-switch (kendaraan) {
-    case "avanza" :
-        console.log("kode M");
-    break;
-    case "ferari" :
-        console.log("kode C");
-    break
-    case "bmw" :
-        console.log("kode B");
+// Program to display vehicle type based on code (M, C, B).
+let vehicle: string = "avanza";
+switch (vehicle) {
+    case "avanza":
+        console.log("code M");
+        break;
+    case "ferrari":
+        console.log("code C");
+        break;
+    case "bmw":
+        console.log("code B");
 }
 
-// Buat program untuk menampilkan bulan berdasarkan angka 1–12.
-let angka: number = 10;
-switch (angka) {
-    case 1 :
+// Program to display month based on number 1–12.
+let number2: number = 10;
+switch (number2) {
+    case 1:
         console.log("january"); break;
-    case 2 :
-        console.log("february");break;
-    case 3 :
-        console.log("maret");break;
-    case 4 :
+    case 2:
+        console.log("february"); break;
+    case 3:
+        console.log("march"); break;
+    case 4:
         console.log("april"); break;
-    case 5 :
-        console.log("mei");break;
-    case 6 :
-        console.log("juni");break;
-    case 7 :
-        console.log("juli");break;
-    case 8 :
-        console.log("agustus");break;
-    case 9 :
-        console.log("september");break;
-    case 10 :
-        console.log("oktober");break;
-    case 11 :
-        console.log("november");break;
-    case 12 : 
-    console.log("desember");break;
+    case 5:
+        console.log("may"); break;
+    case 6:
+        console.log("june"); break;
+    case 7:
+        console.log("july"); break;
+    case 8:
+        console.log("august"); break;
+    case 9:
+        console.log("september"); break;
+    case 10:
+        console.log("october"); break;
+    case 11:
+        console.log("november"); break;
+    case 12:
+        console.log("december"); break;
 };
 
-// Buat program yang menampilkan status pembayaran (lunas, pending, batal).
-let status1: string = "lunas";
+// Program to display payment status (paid, pending, canceled).
+let status1: string = "paid";
 switch (status1) {
-    case "lunas" :
-        console.log("lunas");
-    break;
-    case "pending" :
+    case "paid":
+        console.log("paid");
+        break;
+    case "pending":
         console.log("pending");
-    break;
-    case "batal" :
-        console.log("batal");
-};
-
+        break;
+    case "canceled":
+        console.log("canceled");
+}
