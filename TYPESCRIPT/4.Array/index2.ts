@@ -1,48 +1,47 @@
-// SENIN, 19, JANUARY 2026, 12.49 - 13.39
+// MONDAY, 19 JANUARY 2026, 12:49 - 13:39
 
 // no 1
-// ["apel", "jeruk", "mangga", "pisang"] Ambil dan simpan elemen pertama elemen terakhir ke dalam variabel terpisah.
-let buah = ["apel", "jeruk", "mangga", "pisang"];
-let buah1 = [buah[0], buah[buah.length-1]]
-console.log(buah1);
+// ["apple", "orange", "mango", "banana"] Take and store the first and last elements into separate variables.
+let fruits = ["apple", "orange", "mango", "banana"];
+let fruits1 = [fruits[0], fruits[fruits.length - 1]];
+console.log(fruits1);
 
-// pembelajaran saja, tidak usah dipedulikan
-let buah2 = {
-    buahPertama: buah[0],
-    "buah Kedua": buah[buah.length-1]
-}
-console.log(buah2)
-console.log(buah2.buahPertama)
-console.log(buah2["buah Kedua"])
-// 
+// just for learning, don’t mind this part
+let fruits2 = {
+    firstFruit: fruits[0],
+    "secondFruit": fruits[fruits.length - 1]
+};
+console.log(fruits2);
+console.log(fruits2.firstFruit);
+console.log(fruits2["secondFruit"]);
 
 // no 2
-// [70, 80, 90] Ubah nilai 80 menjadi 85 tanpa membuat array baru.
-let angka = [70, 80, 90];
-angka[1] = 85;
-console.log(angka);
+// [70, 80, 90] Change the value 80 to 85 without creating a new array.
+let numbers = [70, 80, 90];
+numbers[1] = 85;
+console.log(numbers);
 
 // no 3
-// ["Senin", "Selasa", "Rabu"] Lakukan Tambah "Kamis" di akhir array, Hapus elemen terakhir setelah itu.
-let hari = ["senin", "selasa", "rabu"];
-hari.push("kamis");
-hari.pop();
-console.log(hari);
+// ["Monday", "Tuesday", "Wednesday"] Add "Thursday" at the end of the array, then remove the last element afterward.
+let days = ["Monday", "Tuesday", "Wednesday"];
+days.push("Thursday");
+days.pop();
+console.log(days);
 
 // no 4
-// [1, 2],[3, 4] Gabungkan keduanya menjadi satu array baru.
+// [1, 2], [3, 4] Merge both into a new array.
 let number1 = [1, 2];
 let number2 = [3, 4];
 console.log(number1.concat(number2));
-// dengan variable baru
-let number3 = number1.concat(number2)
+// with a new variable
+let number3 = number1.concat(number2);
 console.log(number3);
 
 // no 5
-// ["merah", "kuning", "hijau", "biru"] Ambil hanya ["kuning", "hijau"] dan simpan ke variabel baru.
-let lampu = ["merah", "kuning", "hijau", "biru"];
-let lampu2 = [lampu[1], lampu[lampu.length-2]]
-console.log(lampu2);
-// dengan method saja
-console.log(lampu.slice(1,3));
-//slice(start,end)
+// ["red", "yellow", "green", "blue"] Take only ["yellow", "green"] and store them in a new variable.
+let lights = ["red", "yellow", "green", "blue"];
+let lights2 = [lights[1], lights[lights.length - 2]];
+console.log(lights2);
+// using method only
+console.log(lights.slice(1, 3));
+// slice(start, end)
