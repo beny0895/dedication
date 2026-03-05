@@ -1,59 +1,61 @@
-// SELASA, 20, JANUARY 2026, 12.03 - 12.53
+// TUESDAY, 20 JANUARY 2026, 12:03 - 12:53
 
 // no 1
-// Buat sebuah function bernama luasPersegiPanjang yang menerima 2 parameter: panjang dan lebar, lalu mengembalikan hasil luasnya.
-// Contoh Pemanggilan:luasPersegiPanjang(10, 5); // 50
-function luasPersegiPanjang(panjang: number, lebar: number) {
+// Create a function named rectangleArea that takes 2 parameters: length and width, then returns the area.
+// Example call: rectangleArea(10, 5); // 50
+function rectangleArea(length: number, width: number) {
     return (
-        panjang * lebar
+        length * width
     );
 };
-console.log(luasPersegiPanjang(10, 5));
+console.log(rectangleArea(10, 5));
 
 // no 2
-// Buat function cekGenapGanjil yang menerima 1 parameter angka dan mengembalikan string "Genap" atau "Ganjil".
-function cekGenapGanjil(angka: number): string {
-    if(angka % 2 ===0) {
-        return "genap"
-    } else{
-        return "ganjil"
+// Create a function checkEvenOdd that takes 1 parameter (number) and returns the string "Even" or "Odd".
+function checkEvenOdd(num: number): string {
+    if (num % 2 === 0) {
+        return "Even";
+    } else {
+        return "Odd";
     }
-} 
-console.log(cekGenapGanjil(7))
+}
+console.log(checkEvenOdd(7));
 
-// dengan ternary operator
-// function cekGenapGanjil(angka: number): string {
-//   return angka % 2 === 0 ? "genap" : "ganjil"
-// } 
-// console.log(cekGenapGanjil(1))
+// with ternary operator
+// function checkEvenOdd(num: number): string {
+//   return num % 2 === 0 ? "Even" : "Odd";
+// }
+// console.log(checkEvenOdd(1));
 
 // no 3
-// Buat function hitungDiskon dengan 2 parameter: harga dan diskon (dalam persen).Function mengembalikan harga akhir setelah diskon.
-function hitungDiskon (harga: number, diskon: number): number {
-    return harga - (harga * diskon / 100)
+// Create a function calculateDiscount with 2 parameters: price and discount (in percent).
+// The function returns the final price after discount.
+function calculateDiscount(price: number, discount: number): number {
+    return price - (price * discount / 100);
 };
-console.log((hitungDiskon(100, 20)));
+console.log(calculateDiscount(100, 20));
 
 // no 4
-// Buat function cekKelulusan yang menerima parameter nilai. Jika nilai ≥ 75 → "Lulus" Jika nilai < 75 → "Tidak Lulus"
-function cekKelulusan(nilai: number): string {
-    if(nilai >= 75) {
-        return "lulus";
-    }else {
-        return "tidak lulus"
+// Create a function checkGraduation that takes a parameter score.
+// If score ≥ 75 → "Pass" If score < 75 → "Fail"
+function checkGraduation(score: number): string {
+    if (score >= 75) {
+        return "Pass";
+    } else {
+        return "Fail";
     };
 };
-console.log(cekKelulusan(75));
+console.log(checkGraduation(75));
 
 // no 5
-// Buat function namaLengkap yang menerima namaDepan dan namaBelakang, lalu mengembalikan nama lengkap.
-function namaLengkap(namaDepan: string, namaBelakang: string): string {
-    return namaDepan + " " + namaBelakang
+// Create a function fullName that takes firstName and lastName, then returns the full name.
+function fullName(firstName: string, lastName: string): string {
+    return firstName + " " + lastName;
 };
-console.log(namaLengkap("beny","gunadi"));
+console.log(fullName("beny", "gunadi"));
 
-// dengan template literal
-// function namaLengkap(namaDepan: string, namaBelakang: string): string {
-//     return `${namaDepan} ${namaBelakang}`
+// with template literal
+// function fullName(firstName: string, lastName: string): string {
+//     return `${firstName} ${lastName}`;
 // };
-// console.log(namaLengkap("gunadi", "beny"))
+// console.log(fullName("gunadi", "beny"));
