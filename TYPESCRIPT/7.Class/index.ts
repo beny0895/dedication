@@ -1,142 +1,145 @@
-// SELASA, 27, JANUARY 2026, 22.35 - 23.43
+// TUESDAY, 27 JANUARY 2026, 22.35 - 23.43
 
 // no 1
-// Buat sebuah class bernama User.Ketentuan: Punya property: nama, umur Punya method introduce() yang mengembalikan string:
-"Halo, nama saya {name} dan umur saya {age} tahun"
+// Create a class named User. Requirements: Has properties: name, age.
+// Has method introduce() that returns the string:
+// "Hello, my name is {name} and I am {age} years old"
 class User {
-    nama: string;
-    umur: number;
+    name: string;
+    age: number;
 
-    constructor(paramsNama: string, paramsUmur: number) {
-        this.nama = paramsNama;
-        this.umur = paramsUmur;
-    };  
-
-    introduce () {
-        return `hallo nama saya ${this.nama}, umur saya ${this.umur} tahun`
+    constructor(paramName: string, paramAge: number) {
+        this.name = paramName;
+        this.age = paramAge;
     };
 
+    introduce() {
+        return `Hello, my name is ${this.name}, I am ${this.age} years old`;
+    };
 };
 
 const object = new User("budi", 22);
 console.log(object);
 
 // no 2
-// Buat class Counter. Ketentuan: Property: nilai (nilai awal dari constructor) .
-// Method: pertambahan() → menambah nilai +1, pengurangan() → mengurangi nilai -1, tampilkanData() → mengembalikan nilai saat ini
+// Create a class Counter. Requirements: Property: value (initial value from constructor).
+// Methods: increment() → adds value +1, decrement() → subtracts value -1,
+// showData() → returns the current value.
 class Counter {
-    nilai: number;
+    value: number;
 
-    constructor (paramsnilai: number) {
-        this.nilai = paramsnilai;
+    constructor(paramValue: number) {
+        this.value = paramValue;
     };
 
-    pertambahan() {
-        this.nilai += 1 
+    increment() {
+        this.value += 1;
     };
 
-    pengurangan() {
-        this.nilai -= 1
+    decrement() {
+        this.value -= 1;
     };
 
-    tampilkanData() {
-        return this.nilai
+    showData() {
+        return this.value;
     };
 };
 const counter = new Counter(10);
-counter.pengurangan();
-counter.pengurangan();
-counter.pengurangan();
-counter.pertambahan();
-counter.pertambahan();
-console.log(counter.tampilkanData());
+counter.decrement();
+counter.decrement();
+counter.decrement();
+counter.increment();
+counter.increment();
+console.log(counter.showData());
 
 // no 3
-// Buat class Produk. Ketentuan: Property: nama, harga Jika harga < 0, maka otomatis set ke 0.
-// Method tampilkanInfo() mengembalikan "Produk: {nama}, Harga: {harga}"
-class Produk {
-    nama: string;
-    harga: number;
+// Create a class Product. Requirements: Properties: name, price.
+// If price < 0, automatically set to 0.
+// Method showInfo() returns "Product: {name}, Price: {price}"
+class Product {
+    name: string;
+    price: number;
 
-    constructor(paramsnama: string, paramsharga: number) {
-        this.nama = paramsnama;
-        this.harga = paramsharga;
-        if(this.harga < 0 ) {
-            this.harga = 0
+    constructor(paramName: string, paramPrice: number) {
+        this.name = paramName;
+        this.price = paramPrice;
+        if (this.price < 0) {
+            this.price = 0;
         } else {
-            this.harga = paramsharga
+            this.price = paramPrice;
         };
     };
 
-    tampilkanInfo() {
-        return `Produck: ${this.nama}, Harga ${this.harga}`
+    showInfo() {
+        return `Product: ${this.name}, Price: ${this.price}`;
     };
 };
-const produk = new Produk("tv", -100000);
-console.log(produk.tampilkanInfo());
+const product = new Product("tv", -100000);
+console.log(product.showInfo());
 
 // no 4
-// Buat class Murid. Ketentuan: Property: nama, nilai. 
-// Method tampilkanKelas(): nilai ≥ 80 → "A", nilai  ≥ 70 → "B", nilai ≥ 60 → "C", selain itu → "D"
-class Murid {
-    nama: string;
-    nilai: number;
+// Create a class Student. Requirements: Properties: name, score.
+// Method showGrade(): score ≥ 80 → "A", score ≥ 70 → "B", score ≥ 60 → "C", otherwise → "D"
+class Student {
+    name: string;
+    score: number;
 
-    constructor(paramsnama: string, paramsnilai: number) {
-        this.nama = paramsnama;
-        this.nilai = paramsnilai;                                       
+    constructor(paramName: string, paramScore: number) {
+        this.name = paramName;
+        this.score = paramScore;
     };
 
-    tampilkanData() {
-        if(this.nilai >= 80) {
-            return "A"
-        } else if (this.nilai >= 70) {
-            return "B"
-        } else if (this.nilai >= 60) {
-            return "C"
+    showGrade() {
+        if (this.score >= 80) {
+            return "A";
+        } else if (this.score >= 70) {
+            return "B";
+        } else if (this.score >= 60) {
+            return "C";
         } else {
-            return "D"
+            return "D";
         };
     };
 };
-const murid = new Murid("budi", 90);
-console.log(murid.tampilkanData());
+const student = new Student("budi", 90);
+console.log(student.showGrade());
 
 // no 5
-// Buat class AkunBank. Ketentuan: Property: pemilik, saldo.
-// Method: deposit(amount) → tambah saldo. withdraw(amount) jika saldo cukup → kurangi saldo.
-// jika tidak cukup → kembalikan string "Saldo tidak cukup" infoSaldo() → kembalikan saldo
-class AkunBank {
-    pemilik: string;
-    saldo: number;
+// Create a class BankAccount. Requirements: Properties: owner, balance.
+// Methods: deposit(amount) → add to balance.
+// withdraw(amount) if balance is sufficient → subtract from balance.
+// if not enough → return string "Insufficient balance"
+// infoBalance() → return balance
+class BankAccount {
+    owner: string;
+    balance: number;
 
-    constructor(paramspemilik: string, paramssaldo: number) {
-        this.pemilik = paramspemilik;
-        this.saldo = paramssaldo;
+    constructor(paramOwner: string, paramBalance: number) {
+        this.owner = paramOwner;
+        this.balance = paramBalance;
     };
 
     deposit(amount: number) {
-        this.saldo +=  amount
+        this.balance += amount;
     };
 
     withdraw(amount: number) {
-        if(this.saldo >= amount) {
-            this.saldo -= amount
-            return "withdraw berhasil"
+        if (this.balance >= amount) {
+            this.balance -= amount;
+            return "Withdrawal successful";
         } else {
-            return "saldo tidak cukup"
+            return "Insufficient balance";
         };
     };
 
-    infoSaldo() {
-        return this.saldo
+    infoBalance() {
+        return this.balance;
     };
 };
-const akunbank = new AkunBank("budi", 10);
-akunbank.deposit(15);
-akunbank.deposit(15);
-console.log(akunbank.infoSaldo());
-const akunbank1 = new AkunBank("nicolas", 50);
-console.log(akunbank1.infoSaldo());
-console.log(akunbank1.withdraw(60));
-
+const bankAccount = new BankAccount("budi", 10);
+bankAccount.deposit(15);
+bankAccount.deposit(15);
+console.log(bankAccount.infoBalance());
+const bankAccount1 = new BankAccount("nicolas", 50);
+console.log(bankAccount1.infoBalance());
+console.log(bankAccount1.withdraw(60));
