@@ -1,84 +1,81 @@
-<!-- MONDAY, 2 FEBRUARY 2026, 06:30 - 07:30 -->
- 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Dom Selection</title>
-  <style>
-    * { 
-        border: 2px solid #dedede; 
-        padding: 15px; 
-        margin: 15px; 
-    }
-    html { 
-      margin: 0;
-      padding: 0;
-    }
-    body { 
-      max-width: 600px;
-      margin: 30px auto;
-      font-family: sans-serif;
-      color: #333;
-    }
-  </style>
-</head>
-<body>
-
-  <h1 id="title">Hello World</h1>
-  <div id="container">
+  <head>
+    <meta charset="UTF-8" />
+    <title>DOM Selection</title>
+    <style>
+      * {
+        border: 2px solid #dedede;
+        padding: 15px;
+        margin: 15px;
+      }
+      html {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        max-width: 600px;
+        margin: 30px auto;
+        font-family: sans-serif;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="title">Hello World</h1>
+    <div id="container">
       <section id="a">
-          <p class="p1">paragraf 1</p>
-          <a href="http://instagram.com/BenyGunadi">Instagram Beny Gunadi</a>
-          <p class="p2">paragraf 2</p>
-          <p class="p3">paragraf 3</p>
+        <p class="p1">paragraph 1</p>
+        <a href="http://instagram.com/BenyGunadi">Instagram Beny Gunadi</a>
+        <p class="p2">paragraph 2</p>
+        <p class="p3">paragraph 3</p>
       </section>
       <section id="b">
-          <p>paragraf 4</p>
-          <ul>
-              <li>item 1</li>
-              <li>item 2</li>
-              <li>item 3</li>
-          </ul>
-           <button id="button" onclick="update()">Submit</button>
+        <p>paragraph 4</p>
+        <ul>
+          <li>item 1</li>
+          <li>item 2</li>
+          <li>item 3</li>
+        </ul>
+        <button id="button" onclick="update()">Submit</button>
       </section>
-  </div>
+    </div>
 
-<script>
-// NO 1 // GET ELEMENT BY ID
-// document.getElementById
-// => returns element
-  function update() {
-    const button = document.getElementById("button");
-    button.innerHTML = "succes submit"
-  };
+    <script>
+      // NO 1 // GET ELEMENT BY ID
+      // document.getElementById
+      // => returns element
+      function update() {
+        const button = document.getElementById("button");
+        button.innerHTML = "submit successful";
+      }
 
-// NO 2 // RETRIEVING ELEMENTS BY HTML TAG
-// document.getElementsByTagName
-// => returns an HTML collection
-  const p = document.getElementsByTagName("p");
-  p[0].innerText = "This paragraph 1 is updated via javascript";
-  p[1].innerText = "This paragraph 1 is updated via javascript";
+      // NO 2 // RETRIEVING ELEMENTS BY HTML TAG
+      // document.getElementsByTagName
+      // => returns an HTML collection
+      const p = document.getElementsByTagName("p");
+      p[0].innerText = "This paragraph 1 is updated via JavaScript";
+      p[1].innerText = "This paragraph 2 is updated via JavaScript";
 
-// NO 3 // GETTING ELEMENTS BY CLASS
-// document.getElementsByClassName
-// => returns an HTML collection
-  const p3 = document.getElementsByClassName("p3");
-  p3[0].textContent = "update successful via classname";
+      // NO 3 // GETTING ELEMENTS BY CLASS
+      // document.getElementsByClassName
+      // => returns an HTML collection
+      const p3 = document.getElementsByClassName("p3");
+      p3[0].textContent = "update successful via classname";
 
-// NO 4 // RETRIEVING ELEMENTS WITH QUERY SELECTOR
-// document.QuerySelector
-// => returns element
-  const title = document.querySelector("#title");
-  title.style.color = "orange";
+      // NO 4 // RETRIEVING ELEMENTS WITH QUERY SELECTOR
+      // document.querySelector
+      // => returns element
+      const title = document.querySelector("#title");
+      title.style.color = "orange";
 
-// NO 5 // FETCHING ELEMENTS WITH QUERY SELECTOR ALL
-// document.QuerySelectorAll
-// => returns NodeList
-  const li = document.querySelectorAll("li");
-  for(let i = 0; i < li.length; i++) {
-     li[i].style.backgroundColor = "cyan"
-  };
-</script>
-</body>
+      // NO 5 // FETCHING ELEMENTS WITH QUERY SELECTOR ALL
+      // document.querySelectorAll
+      // => returns NodeList
+      const li = document.querySelectorAll("li");
+      for (let i = 0; i < li.length; i++) {
+        li[i].style.backgroundColor = "cyan";
+      }
+    </script>
+  </body>
 </html>
