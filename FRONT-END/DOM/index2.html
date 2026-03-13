@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Dom Manipulation</title>
+  <title>DOM Manipulation</title>
   <style>
     * { 
         border: 2px solid #dedede; 
@@ -24,7 +24,6 @@
     .bg {
       background-color: lightblue;
     }
-    
   </style>
 </head>
 <body>
@@ -32,64 +31,63 @@
   <h1 id="title">Hello World</h1>
   <div id="container">
       <section id="a">
-          <p class="p1">paragraf 1</p>
-          <a href="http://instagram.com/Beny Gunadi">Instagram Beny  Gunadi</a>
-          <p class="p2">paragraf 2</p>
-          <p class="p3">paragraf 3</p>
+          <p class="p1">paragraph 1</p>
+          <a href="http://instagram.com/BenyGunadi">Instagram Beny Gunadi</a>
+          <p class="p2">paragraph 2</p>
+          <p class="p3">paragraph 3</p>
       </section>
       <section id="b">
-          <p>paragraf 4</p>
+          <p>paragraph 4</p>
           <ul>
               <li>item 1</li>
               <li>item 2</li>
               <li>item 3</li>
           </ul>
-          <button onclick="lampbg()">lamp</button>
+          <button onclick="lampbg()">Lamp</button>
       </section>
   </div>
 
 <script>
-// NO 1 // CREATING & CHECKING ID/CLASS ATTRIBUTES, ETC. WITH SET & GET
-// new setAttribute
+// NO 1 // CREATING & CHECKING ID/CLASS ATTRIBUTES WITH SET & GET
+// setAttribute
     const title = document.getElementsByTagName("h1")[0];
-    judul.setAttribute("name", "beny");
+    title.setAttribute("name", "beny");
 
     const a = document.querySelector("section#a a");
     a.setAttribute("id", "link");
-    // getAttribute to get the value
+    // getAttribute to retrieve the value
     a.getAttribute("id");
   
-// NO. 2 // CLASS LIST
+// NO 2 // CLASS LIST
     const p2 = document.querySelector(".p2");
 // classList.add
-    // add class values ​​without overwriting the old values
+    // add class values without overwriting the old ones
     p2.classList.add("label");
     p2.classList.add("p3");
 
-// classList.revome
+// classList.remove
     // removes the class value if there is one named "label"
     p2.classList.remove("label");
 
 // classList.toggle
-    // add a value if it doesn't exist, otherwise it will be removed
+    // adds a value if it doesn’t exist, otherwise removes it
     p2.classList.toggle("p4");
-         // create a lamp
+
+    // create a lamp effect
     function lampbg () {
-      //  const docs = document.getElementsByTagName("body")[0];
-      // docs.classList.toggle("bg")
-      const docs = document.body.classList.toggle("bg");
+      document.body.classList.toggle("bg");
     };
 
 // classList.item
-    // to see the class inside the tag if it exists displayed if not false
-    p2.classList.item("2");
+    // to see the class inside the tag if it exists, otherwise returns null
+    p2.classList.item(2);
 
 // classList.contains
-    // check if there is a p4 class in the p2 tag, if there is true if there is not false
+    // check if there is a "p4" class in the p2 tag, returns true or false
     p2.classList.contains("p4");
 
 // classList.replace
-  // to replace the class inside the tag
+    // replace the class inside the tag
     p2.classList.replace("p4", "p7");
     
 </script>
