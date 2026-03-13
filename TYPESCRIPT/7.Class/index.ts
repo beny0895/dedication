@@ -1,4 +1,4 @@
-// TUESDAY, 27 JANUARY 2026, 22.35 - 23.43
+// TUESDAY, 27 JANUARY 2026, 22:35 - 23:43
 
 // no 1
 // Create a class named User. Requirements: Has properties: name, age.

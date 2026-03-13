@@ -1,77 +1,80 @@
-// SABTU, 24, JANUARY 2026, 10.20 - 11.11
+// SATURDAY, 24 JANUARY 2026, 10:20 - 11:11
 
-// soal 1
-// Buat sebuah object user yang punya properti: nama umur pekerjaan Lalu: 
-// Tampilkan nilai nama Ubah umur Tambahkan properti baru status Aktif
+// question 1
+// Create a user object with properties: name, age, job.
+// Then: Display the name value, change the age, add a new property activeStatus.
 const user = {
-    nama: "budi",
-    umur: 22,
-    statusAktif: true,
-    pekerjaan: "pembisnis"
+    name: "budi",
+    age: 22,
+    activeStatus: true,
+    job: "businessman"
 };
 console.log(user);
 
-// soal 2
-// Buat object mobil, jika bensin method jalan() → mengurangi bensin, method isiBensin() → menambah bensin
-const mobil = {
-    merk: "bmw",
-    bensin: 5,
-    jalan() {
-        this.bensin -= 1
+// question 2
+// Create a car object. If fuel exists, method drive() → decreases fuel,
+// method refuel() → increases fuel.
+const car = {
+    brand: "bmw",
+    fuel: 5,
+    drive() {
+        this.fuel -= 1;
     },
-    isiBensin () {
-        this.bensin += 1
+    refuel() {
+        this.fuel += 1;
     }
 };
-mobil.isiBensin();
-console.log(mobil.bensin);
+car.refuel();
+console.log(car.fuel);
 
-// soal 3
-// Buat object akun yang memiliki: username email, profil (object) -> namaLengkap, alamat, umur.
-// Ambil dan tampilkan: nama lengkap alamat
-const akun = {
+// question 3
+// Create an account object with: username, email, profile (object) -> fullName, address, age.
+// Retrieve and display: fullName and address.
+const account = {
     username: "buds",
     email: "budi@gmail.com",
     profile: {
-        namaLengkap: "budi taniagus",
-        alamat : "cilengusi hijau",
-        umur: 22
+        fullName: "budi taniagus",
+        address: "cilengusi hijau",
+        age: 22
     }
 };
-console.log(akun.profile.namaLengkap)
-console.log(akun.profile.alamat);
+console.log(account.profile.fullName);
+console.log(account.profile.address);
 
-// no 4
-// Buat object produk dengan: nama, harga, stok Buat logika: Jika stok 0 → tampilkan "Produk habis" Jika ada → "Produk tersedia"
-const produk = {
-    nama: "hanphone",
-    harga: 1000000,
+// question 4
+// Create a product object with: name, price, stock.
+// Logic: If stock = 0 → display "Out of stock" If available → "Product available".
+const product = {
+    name: "handphone",
+    price: 1000000,
     stock: 0,
-    cekStocks() {
-        if(this.stock === 0) {
-            console.log("produk tersedia")
+    checkStock() {
+        if (this.stock === 0) {
+            console.log("Out of stock");
         } else {
-            console.log("produk habis")
+            console.log("Product available");
         }
     }
 };
-produk.cekStocks()
-console.log(produk.stock);
+product.checkStock();
+console.log(product.stock);
 
-// no 5
-// Buat function cetakData() yang menerima object sebagai parameter. 
-// Object berisi: nama umur kota Function menampilkan kalimat: "Nama saya ..., umur ... tahun, tinggal di ..."
-interface Idata {
-    nama: string,
-    umur: number,
-    kota: string
+// question 5
+// Create a function printData() that takes an object as a parameter.
+// Object contains: name, age, city.
+// Function displays the sentence: "My name is ..., I am ... years old, I live in ..."
+interface IData {
+    name: string,
+    age: number,
+    city: string
 }
-const data: Idata = {
-    nama: "budi",
-    umur: 22,
-    kota: "cileungsi",
+const data: IData = {
+    name: "budi",
+    age: 22,
+    city: "cileungsi",
 };
-function cekData (data: Idata) {
-    return console.log(`nama saya ${data.nama}, umur saya ${data.umur} tahun, sata tinggal di ${data.kota}`)
+function printData(data: IData) {
+    return console.log(`My name is ${data.name}, I am ${data.age} years old, I live in ${data.city}`);
 }
-cekData(data);
+printData(data);
