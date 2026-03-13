@@ -17,10 +17,10 @@ console.log("4");
 // What happens behind the scenes: The async function is called -> Meets await fetch(...).
   // JavaScript: Sends an async task (fetch) to the Web API/environment without waiting, continues executing other code (the event loop continues running).
   // When the fetch is complete, the result goes to the JavaScript microtask queue, and execution resumes immediately after the await.
-// Just “wait” for that async function, Not waiting for the entire JavaScript program
+// Just “wait” for that async function, Not waiting for the entire JavaScript program.
 
 // async → allows the use of await
 // await → waits for the Promise to complete
 // the async process is sent to the Web API in the background and processed
 // JavaScript continues to run other code
-// after the async process completes, it is sent back to JavaScript
+// after the async process completes, it is sent back to JavaScript.
