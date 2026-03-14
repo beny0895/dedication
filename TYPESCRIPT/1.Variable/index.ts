@@ -1,4 +1,4 @@
-// TUESDAY, 6, JANUARY 2026, 12:11 - 13:29
+// TUESDAY, 6 JANUARY 2026, 12:11 - 13:29
 
 // task 1
 const Name: string = "budi";
