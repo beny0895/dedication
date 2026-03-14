@@ -3,39 +3,50 @@
 let animals = ["fish", "bird", "cat", "bear"];
 console.log(animals.length);
 
-animals.forEach((variable, index, array)=> {
-    console.log(`${index} : ${variable} : ${array}`)
-})
+animals.forEach((variable, index, array) => {
+  console.log(`${index} : ${variable} : ${array}`);
+});
 
-for(let i = 0; i < animals.length; i++) {
-    console.log(i);
-};
+for (let i = 0; i < animals.length; i++) {
+  console.log(i);
+}
 
-animals.forEach(function(animals, index) {
-    console.log(`${index} : ${animals}`);
+animals.forEach(function (animals, index) {
+  console.log(`${index} : ${animals}`);
 
-    console.log(animals);
+  console.log(animals);
 });
 
 interface Istudent {
-    firstname: string,
-    lastname: string,
-    age: number,
-    // [x: string] : string | number
-};
-const student: Istudent= {
-    firstname : "budi",
-    lastname: "taniagus",
-    age: 22,
+  firstname: string;
+  lastname: string;
+  age: number;
+  // [x: string] : string | number
+}
+const student: Istudent = {
+  firstname: "budi",
+  lastname: "taniagus",
+  age: 22,
 };
 // for in
 for (let x in student) {
-    console.log(`${x} : ${student[x as keyof Istudent]}`);
-};
+  console.log(`${x} : ${student[x as keyof Istudent]}`);
+}
 
 // for
 const keys = Object.keys(student) as (keyof Istudent)[];
 for (let i = 0; i < keys.length; i++) {
   const key = keys[i];
   console.log(`${key} : ${student[key as keyof Istudent]}`);
-};
+}
+
+//  SATURDAY, 14 MARCH 2026, 23:24.
+
+const arr = [1, 2, 3, 4, 5];
+for (let i = 0; i <= arr.length; i++) {
+  console.log(i);
+}
+
+arr.forEach((value: number, index: number) => {
+  console.log(`${value * 2} indexnya adalah: ${index}`);
+});
